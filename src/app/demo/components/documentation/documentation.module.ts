@@ -4,13 +4,17 @@ import { DocumentationRoutingModule } from './documentation-routing.module';
 import { DocumentationComponent } from './documentation.component';
 import { AvatarModule } from 'primeng/avatar';
 import { MenuModule } from 'primeng/menu';
+import { TabViewModule } from 'primeng/tabview';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
     imports: [
         CommonModule,
         DocumentationRoutingModule,
         AvatarModule,
-        MenuModule
+        MenuModule,
+        TabViewModule,
+        ButtonModule
     ],
     declarations: [DocumentationComponent]
 })

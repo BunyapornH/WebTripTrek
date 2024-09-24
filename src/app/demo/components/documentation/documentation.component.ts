@@ -12,11 +12,13 @@ export class DocumentationComponent {
         this.menus = [
             {
                 label: 'Profile',
-                icon: 'pi pi-plus'
+                icon: 'pi pi-user',
+                routerLink: '/documentation'
             },
             {
                 label: 'Home',
-                icon: 'pi pi-plus'
+                icon: 'pi pi-home',
+                routerLink: '/'
             }
         ];
     }

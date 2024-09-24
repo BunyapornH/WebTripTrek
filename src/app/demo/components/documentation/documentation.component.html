@@ -7,6 +7,76 @@
     </span>
 </span>
 
-<div class="flex justify-content-left">
-    <p-menu [model]="menus" class="menu-side"/>
+<div class="grid">
+    <div class="col-2">
+        <div class="flex justify-content-left">
+            <p-menu [model]="menus" class="menu-side"/>
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="flex mb-2 gap-2 justify-content-end">
+            <button class="button-post">+ Create Post</button>
+        </div>
+        <p-tabView>
+            <p-tabPanel header="Post">
+                <div class="grid">
+                    <div class="col-4">
+                            <div class="container">
+                                <img src="assets/triptrek/images/Nan/Nan0.jpg" alt="Avatar" class="image-post">
+                                <div class="overlay">
+                                  <div class="text">NAN</div>
+                                </div>
+                              </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="container">
+                            <img src="assets/triptrek/images/Phuket/Phuket0.png" alt="Avatar" class="image-post">
+                            <div class="overlay">
+                              <div class="text">PHUKET</div>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-4">
+                    <div class="container">
+                        <img src="assets/triptrek/images/ChiangMai/ChiangMai0.png" alt="Avatar" class="image-post">
+                        <div class="overlay">
+                          <div class="text">CHIANG MAI</div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="col-4">
+                        <div class="container">
+                            <img src="assets/triptrek/images/Japan/Japan0.jpg" alt="Avatar" class="image-post">
+                            <div class="overlay">
+                              <div class="text">JAPAN</div>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-4">
+                    <div class="container">
+                        <img src="assets/triptrek/images/Switz/Switz0.jpg" alt="Avatar" class="image-post">
+                        <div class="overlay">
+                          <div class="text">SWITZERLAND</div>
+                        </div>
+                      </div>
+            </div>
+            <div class="col-4">
+                <div class="container">
+                    <img src="assets/triptrek/images/Taiwan/Taiwan0.jpg" alt="Avatar" class="image-post">
+                    <div class="overlay" [routerLink]="'/landing'">
+                      <div class="text">TAIWAN</div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+            </p-tabPanel>
+            <p-tabPanel header="Like">
+                <p>
+                    <!--desciption-->
+                </p>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
 </div>

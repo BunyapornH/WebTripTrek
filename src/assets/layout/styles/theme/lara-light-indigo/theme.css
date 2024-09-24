@@ -297,7 +297,7 @@
   .p-component {
     font-family: var(--font-family);
     font-feature-settings: var(--font-feature-settings, normal);
-    font-size: 1rem;
+    font-size: 15px;
     font-weight: normal;
   }
 
@@ -4116,6 +4116,7 @@
     padding: 1.25rem;
     color: #374151;
     font-weight: 700;
+    font-size: 20px;
     border-radius: 6px;
   }
   .p-fieldset.p-fieldset-toggleable .p-fieldset-legend {
@@ -4252,7 +4253,8 @@
     background: #ffffff;
     color: #6b7280;
     padding: 1.25rem;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 20px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     transition: box-shadow 0.2s;
@@ -4903,10 +4905,10 @@
   }
 
   .p-menu {
-    padding: 0.5rem 0;
-    background: #ffffff;
+    padding: 1rem 0;
+    
     color: #4b5563;
-    border: 1px solid #e5e7eb;
+   
     border-radius: 6px;
     width: 12.5rem;
   }
@@ -4924,6 +4926,7 @@
     color: #4b5563;
     font-size: 20px;
     font-weight: bold;
+    padding-left: 10px;
   }
   .p-menu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-icon {
     color: #6b7280;
@@ -5948,7 +5951,7 @@
     margin-bottom: 0.5rem;
   }
   .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators {
-    background: rgba(0, 0, 0, 0.5);
+    /*background: rgba(0, 0, 0, 0.5);*/
   }
   .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators .p-galleria-indicator button {
     background: rgba(255, 255, 255, 0.4);
