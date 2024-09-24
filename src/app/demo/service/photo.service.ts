@@ -4,7 +4,7 @@ import { Image } from '../api/image';
 
 @Injectable()
 export class PhotoService {
-
+    
     constructor(private http: HttpClient) { }
 
     getImages() {

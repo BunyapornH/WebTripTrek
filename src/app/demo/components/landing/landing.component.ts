@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
-import { GalleriaModule } from 'primeng/galleria';
-import { StepperModule } from 'primeng/stepper';
 
 @Component({
     selector: 'app-landing',
     templateUrl: './landing.component.html'
-    standalone: true,
-    imports: [StepperModule]
 })
 export class LandingComponent {
     images: any[] | undefined;
@@ -28,6 +24,38 @@ export class LandingComponent {
         }
     ];
 
-    constructor(public layoutService: LayoutService, public router: Router) {}
+    constructor(public layoutService: LayoutService, public router: Router) {
+        this.images=this.getData()
+    }
+
+    getData() {
+        return [
+            {
+                itemImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg',
+                thumbnailImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria1s.jpg',
+                alt: 'Description for Image 1',
+                title: 'Title 1'
+            },
+            {
+                itemImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria2.jpg',
+                thumbnailImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria2s.jpg',
+                alt: 'Description for Image 2',
+                title: 'Title 2'
+            },
+            {
+                itemImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria3.jpg',
+                thumbnailImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria3s.jpg',
+                alt: 'Description for Image 3',
+                title: 'Title 3'
+            },
+            {
+                itemImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria4.jpg',
+                thumbnailImageSrc: 'https://primefaces.org/cdn/primeng/images/galleria/galleria4s.jpg',
+                alt: 'Description for Image 4',
+                title: 'Title 4'
+            },
+            
+        ];
+    }
     
 }

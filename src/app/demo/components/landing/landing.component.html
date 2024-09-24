@@ -1,49 +1,75 @@
 <div class="card">
+    <p-galleria
+    style="text-align: -webkit-center;"
+    [(value)]="images" 
+    [showItemNavigators]="true" 
+    [showThumbnails]="false" 
+    [showIndicators]="true" 
+    [showIndicatorsOnItem]="true" 
+    [responsiveOptions]="responsiveOptions" 
+    [containerStyle]="{ 'max-width': '640px', 'margin-top': '2em' }">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+            <div class="grid grid-nogutter justify-content-center">
+                <img [src]="item.thumbnailImageSrc" style="display: block;" />
+            </div>
+        </ng-template>
+</p-galleria>
+
     <h1>
         A 4-day, 3-night healing trip to Taiwan. Travel on your own, no tour 
 is needed!
     </h1>
     <h4>
-        Chounty: Taiwan<br>
-        City: Taoyuan, Taipei, Xiamen (China), Keelung, New Taipei
+        Chounty: Taiwan<br><br>
+        City: Taoyuan, Taipei, Xiamen (China), Keelung, New Taipei<br><br>
         Detail:
     </h4>
-    <p-stepper orientation="vertical">
-        <p-stepperPanel header="Header I">
-            <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-                <div class="flex flex-column h-12rem">
-                    <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">Content I</div>
-                </div>
-                <div class="flex py-4">
-                    <p-button label="Next" (onClick)="nextCallback.emit()" />
-                </div
-            ></ng-template>
-        </p-stepperPanel>
-        <p-stepperPanel header="Header II">
-            <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
-                <div class="flex flex-column h-12rem">
-                    <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                        Content II
-                    </div>
-                </div>
-                <div class="flex py-4 gap-2">
-                    <p-button label="Back" severity="secondary" (onClick)="prevCallback.emit()" />
-                    <p-button label="Next" (onClick)="nextCallback.emit()" />
-                </div>
-            </ng-template>
-        </p-stepperPanel>
-        <p-stepperPanel header="Header III">
-            <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-                <div class="flex flex-column h-12rem">
-                    <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                        Content III
-                    </div>
-                </div>
-                <div class="flex py-4">
-                    <p-button label="Back" (onClick)="prevCallback.emit()" />
-                </div>
-            </ng-template>
-        </p-stepperPanel>
-    </p-stepper>    
-
+    <p-accordion [activeIndex]="0">
+        <p-accordionTab header="Day 1">
+            <p>
+                - Suvarnabhumi Airport: Traveling with EVA Airline night flight.<br>
+                - Taiwan Taoyuan International Airport: Taoyuan Airport MRT to Taoyuan HSR Station<br>
+                - Taiwan, Taoyuan City, Zhongli District, Section 1st, Yongyuan Road, R.B.C ROAST BY CHEN Coffee Roasters/COFFEE ARK POP-UP Coffee Roasters: While waiting for the Aquarium to open.<br>
+                - Xpark: Aquarium<br>
+                - Hotel PaPa Whale, Kunming Street, Wanhua District, Taipei City, Taiwan: Take the MRT to Taipei Main Station and transfer to the blue line to MRT Ximending Exit 6.<br>
+                - Mala Hotpot Xining (Ximending) Xining Road, Wanhua District, Taipei City, Taiwan <br>
+                - Ximending Night Market, Hanzhong Street, Wanhua District, Taipei City, Taiwan <br>
+            </p>
+        </p-accordionTab>
+        <p-accordionTab header="Day 2">
+            <p>
+                - Hotel PaPa Whale <br>
+                - Tiaoshi (Zhongshan Road Branch), Dazhong Road, Siming District, Xiamen, Fujian, China The cutest bus stop at BG is the sea. It will be so cute if you don't come during the rainy season. How to get there: Take bus number 862 and get off at Tiaoshi Station.<br>
+                - Zhengbin Fishing Harbor, Zhongzheng District, Keelung City, Taiwan: It is an old harbor, a highly recommended, cute place with lots of cafes! How to get there: You can take the MRT to Zhongxiao Dunhua Station and then take Bus 1579 to Zhengbin stop.<br>
+                - Houtong Cat Village, Ruifang District, New Taipei City, Taiwan Cat Village: Take the train from Taipei Main Station and get off at Houtong Station.<br>
+                - Jiufen Old Street, Jishan Street, Ruifang District, New Taipei City, Taiwan: Mountain Village. <br>
+                - Ximending Night Market, Hanzhong Street, Wanhua District, Taipei City, Taiwan. Shopping and food.<br>
+            </p>
+        </p-accordionTab>
+        <p-accordionTab header="Day 3">
+            <p>
+                - Fujin Street, Songshan District, Taipei City, Taiwan: Take the MRT Ximending and transfer to the Gold Line at Zhongxiao Fuxing Station BR10 and get off at Songshan Airport Station BR13, then walk a bit.<br>
+                - but. we love butter, Fujin Street, Songshan District, Taipei City, Taiwan: This is a cafe that people reviewed.<br>
+                - Zhongshan District, Taipei City, Taiwan: Zhongshan District is a youth hotspot with cafes, restaurants, clothing stores, and hair salons.Take the MRT Songshan Airport BR13 and transfer to the green line at Nanjing Fuxing Station BR11/G16 and get off at Zhongshan G14.<br>
+                - (Flowers Taiwan) R9 Café: Let's stop by this landmark cafe for lunch. Its signature feature is the wall with street art.<br>
+                - Sisinan Village Museum, Songqin Street, Xinyi District, Taipei City, Taiwan: Take MRT Zhongshan G14/R11 and get off at Taipei 101 R03 Station.<br>
+                - Shilin Night Market, Jihe Road, Shilin District, Taipei City, Taiwan: Take MRT Taipei 101 R03 and get off at Jiantan R15.<br>
+                - Ximending Night Market, Hanzhong Street, Wanhua District, Taipei City, Taiwan: Recommended Totto Ramen, very delicious.<br>
+                - Hotel PaPa Whale, Kunming Street, Wanhua District, Taipei City, Taiwan: Return to the hotel and sleep at your leisure.<br>
+            </p>
+        </p-accordionTab>
+        <p-accordionTab header="Day 4">
+            <p>
+                - 7-ELEVEN Kitty: Very close to my accommodation. All the branches are cute with Kitty.<br>
+                - Longshan Temple Street Underground, Section 1, Xiyuan Rd, Wanhua District, Taipei City, Taiwan: Longshan Temple praying, buying amulets, and Activate! Take the MRT Ximending BL11 and get off at Longshan Temple Station BL10.<br>
+                - Huang Long Zhuang, Guling Street, Zhongzheng District, Taipei City, Taiwan: Lunch at a famous Xiao Long Bao Restaurant. Take the Longshan Temple station BL10, transfer to the green line at Ximending, and get off at Chiang Kai check station G10.<br>
+                - Chiang Kai-shek Memorial Hall, Zhongzheng District, Taipei City, Taiwan: The last landmark of Taiwan that Chiang Kai-shek visited is a short walk from the Xiao Long Bao.<br>
+                - Taoyuan Airport, Hangzhou South Road, Dayuan District, Taoyuan City, Taiwan: For the return trip, take the Taoyuan Airport MRT from Taipei main station to Taoyuan Airport Terminal 2, which takes only about 1 hour.<br>
+                - Suvarnabhumi Airport (BKK), Nong Prue, Bang Phli District, Samut Prakan, Thailand: Return flight with EVA Airways as usual, arrived safely at Suvarnabhumi.<br>
+            </p>
+        </p-accordionTab>
+    </p-accordion>
 </div>

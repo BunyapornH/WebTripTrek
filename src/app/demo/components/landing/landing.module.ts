@@ -8,8 +8,8 @@ import { PanelModule } from 'primeng/panel';
 import { AvatarModule } from 'primeng/avatar';
 import { MenuModule } from 'primeng/menu';
 import { GalleriaModule } from 'primeng/galleria';
-import { StepperModule } from 'primeng/stepper';
-import { ButtonModule } from 'primeng/button';
+import { AccordionModule } from 'primeng/accordion';
+
 
 @NgModule({
     imports: [
@@ -21,8 +21,7 @@ import { ButtonModule } from 'primeng/button';
         AvatarModule,
         MenuModule,
         GalleriaModule,
-        StepperModule,
-        ButtonModule
+        AccordionModule
     ],
     declarations: [LandingComponent]
 })
