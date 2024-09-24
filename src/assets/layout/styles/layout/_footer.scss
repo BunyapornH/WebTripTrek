@@ -1,0 +1,19 @@
+.layout-footer {
+    transition: margin-left $transitionDuration;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--surface-border);
+    background-color: #1A5319;
+    height: 200px;
+    width: 100%;
+    color: #C2E39A !important;
+    font-size: 24px;
+    text-align: center;
+}
+
+.icon-footer {
+    width: 24px;
+    height: 24px;
+}

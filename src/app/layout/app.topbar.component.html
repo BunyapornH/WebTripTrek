@@ -1,0 +1,18 @@
+<div class="layout-topbar">
+    <a class="layout-topbar-logo" routerLink="">
+        <img src="assets/triptrek/images/LogoG.png" alt="logo">
+    </a>
+
+
+    <button #topbarmenubutton class="layout-topbar-menu-button layout-topbar-button" [routerLink]="'/documentation'">
+        <p-avatar image="assets/triptrek/images/profileamico.png" shape="circle" />
+    </button>
+
+    <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+ 
+        <button class="layout-topbar-button"[routerLink]="'/documentation'">
+            <p-avatar image="assets/triptrek/images/profileamico.png" shape="circle" />
+        </button>
+
+    </div>
+</div>

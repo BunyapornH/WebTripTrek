@@ -1,0 +1,58 @@
+@media screen and (max-width: 991px) {
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.background-profile {
+    margin-top: -175px;
+    position: static;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+
+.image-profile {
+    width: 250px;
+    height: 250px;
+    border: solid 2px #1A5319;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.txt-profile {
+    display: block; /* Makes the name take a full line */
+    padding-left: 20px;
+}
+
+.txt-name {
+    font-size: 48px;
+    font-weight: bold; /* Optional styling */
+}
+
+.txt-description {
+    display: block; /* Makes the description take a full line */
+    text-align: start;
+    font-size: 15px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-side {
+    font-size: 20px;
+    font-weight: bold;
+}
